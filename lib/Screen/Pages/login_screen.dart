@@ -20,10 +20,11 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           SizedBox(
             height: double.infinity,
-            width: 1200,
+            width:  double.infinity,
             child: Image.asset(
+
               RImages.loginScreenimage,
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
             ),
           ),
           Column(
