@@ -37,62 +37,47 @@ class SignInPage extends StatelessWidget {
                         style: TextStyle(
                             color: Color(int.parse(RColors.colorCode)))),
                   ])),
-               Column(
-
-                children: [
-                  Row(
-
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 40),
-                        child: Text(
-                          "Email",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 18),
-                        ),
-                      ),
-                    ],
-                  ),
-                  CustomTextField(
-                    hintText: "john@gmail.com",
-                    labelText: "",
-                  ),
-                  SizedBox(
-                    height: 60,
-                  ),
-                  Row(
-
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 40),
-                        child: Text(
-                          "Password",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                        ),
-                      ),
-                    ],
-                  ),
-                  CustomTextField(
-                    hintText: "********",
-                    labelText: "",
-                  ),
-
-                ],
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Email",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 18),
+                    ),
+                    CustomTextField(
+                      hintText: "john@gmail.com",
+                      labelText: "",
+                    ),
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Text(
+                      "Password",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    CustomTextField(
+                      hintText: "********",
+                      labelText: "",
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 width: 350,
                 height: 65,
                 child: TextButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
                           Color(int.parse(RColors.colorCode)))),
-                  child: const Text(
+                  child: Text(
                     "Login",
                     style: TextStyle(
                         color: Colors.white,
