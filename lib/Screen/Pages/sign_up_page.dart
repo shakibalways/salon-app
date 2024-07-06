@@ -27,7 +27,7 @@ class SignUpPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 35),
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 20,
                     foregroundColor: Colors.white,
                     child: Icon(
@@ -36,18 +36,18 @@ class SignUpPage extends StatelessWidget {
                       size: 35,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
                   RichText(
                       text: TextSpan(
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
                           ),
                           children: [
-                        TextSpan(text: RTexts.titleText),
+                        const TextSpan(text: RTexts.titleText),
                         TextSpan(
                             text: RTexts.titleText1,
                             style: TextStyle(
@@ -57,8 +57,8 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
             Image.asset(RImages.signupImage),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                 bottom: 20
               ),
               child: Column(
@@ -96,7 +96,7 @@ class SignUpPage extends StatelessWidget {
                     style: ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(
                             Color(int.parse(RColors.colorCode)))),
-                    child: Text(
+                    child: const Text(
                       RTexts.buttonName,
                       style: TextStyle(
                           color: Colors.white,
@@ -105,8 +105,8 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Text(
                     RTexts.skip,
                     style: TextStyle(

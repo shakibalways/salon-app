@@ -7,9 +7,13 @@ class RTexts {
   static const String signUpText = "Sign-up";
   // Next Page Text
   static const String firstName = "Full Name";
+  static const String hintText = "John Doe";
   static const String mail = "E-mail";
+  static const String gmail = "shakibmohammad18@gmail.com";
   static const String pass = "Password";
+  static const String pass1 = "Password";
   static const String confirm = "Confirm Password ";
+  static const String confirm1 = "Confirm Password ";
   // Sign Up Page
 static const String address ="Address";
 static const String number ="Phone Number";

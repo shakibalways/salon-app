@@ -26,7 +26,7 @@ class NextPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 35),
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 20,
                     foregroundColor: Colors.white,
                     child: Icon(
@@ -35,18 +35,18 @@ class NextPage extends StatelessWidget {
                       size: 40,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
                   RichText(
                       text: TextSpan(
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
                           ),
                           children: [
-                        TextSpan(text: RTexts.titleText),
+                        const TextSpan(text: RTexts.titleText),
                         TextSpan(
                             text: RTexts.titleText1,
                             style: TextStyle(
@@ -55,7 +55,7 @@ class NextPage extends StatelessWidget {
                 ],
               ),
             ),
-            Column(
+             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -65,7 +65,7 @@ class NextPage extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 18),
                 ),
-                CustomTextField(hintText: "John Doe"),
+                CustomTextField(hintText: RTexts.hintText),
                 SizedBox(
                   height: 20,
                 ),
@@ -76,7 +76,7 @@ class NextPage extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 18),
                 ),
-                CustomTextField(hintText: "shakibmohammad18@gmail.com"),
+                CustomTextField(hintText: RTexts.gmail),
                 SizedBox(
                   height: 20,
                 ),
@@ -87,7 +87,7 @@ class NextPage extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 18),
                 ),
-                CustomTextField(hintText: "Password"),
+                CustomTextField(hintText: RTexts.pass),
                 SizedBox(
                   height: 20,
                 ),
@@ -98,7 +98,7 @@ class NextPage extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 18),
                 ),
-                CustomTextField(hintText: "Comfirm Password"),
+                CustomTextField(hintText: RTexts.confirm1),
               ],
             ),
             SizedBox(
@@ -109,7 +109,7 @@ class NextPage extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
                         Color(int.parse(RColors.colorCode)))),
-                child: Text(
+                child: const Text(
                   "Next",
                   style: TextStyle(
                       color: Colors.white,

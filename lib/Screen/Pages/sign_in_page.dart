@@ -37,7 +37,7 @@ class SignInPage extends StatelessWidget {
                         style: TextStyle(
                             color: Color(int.parse(RColors.colorCode)))),
                   ])),
-              Center(
+              const Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -77,7 +77,7 @@ class SignInPage extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
                           Color(int.parse(RColors.colorCode)))),
-                  child: Text(
+                  child: const Text(
                     "Login",
                     style: TextStyle(
                         color: Colors.white,

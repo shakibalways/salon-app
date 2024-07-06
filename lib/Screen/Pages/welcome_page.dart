@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../utilits/constant/color_code_list.dart';
 import '../../utilits/constant/image_list.dart';
@@ -39,14 +37,14 @@ class WelcomePage extends StatelessWidget {
                           style: TextStyle(
                               color: Color(int.parse(RColors.colorCode)))),
                     ])),
-                Text(
+                const Text(
                   RTexts.welcomeText,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 SizedBox(
                   height: 30,
                   child: ListView.builder(
