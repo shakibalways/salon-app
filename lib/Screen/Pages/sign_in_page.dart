@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salon/Common/Widget/custom_textfield.dart';
 import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
@@ -21,22 +22,87 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               RichText(
                   text: TextSpan(
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold),
                       children: <TextSpan>[
-                    TextSpan(text: RTexts.titleText),
+                    const TextSpan(text: RTexts.titleText),
                     TextSpan(
                         text: RTexts.titleText1,
                         style: TextStyle(
                             color: Color(int.parse(RColors.colorCode)))),
-                  ]))
+                  ])),
+               Column(
+
+                children: [
+                  Row(
+
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 40),
+                        child: Text(
+                          "Email",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                  CustomTextField(
+                    hintText: "john@gmail.com",
+                    labelText: "",
+                  ),
+                  SizedBox(
+                    height: 60,
+                  ),
+                  Row(
+
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 40),
+                        child: Text(
+                          "Password",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                  CustomTextField(
+                    hintText: "********",
+                    labelText: "",
+                  ),
+
+                ],
+              ),
+              SizedBox(
+                width: 350,
+                height: 65,
+                child: TextButton(
+                  onPressed: (){},
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(
+                          Color(int.parse(RColors.colorCode)))),
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
+                ),
+              )
             ],
-          )
+          ),
         ],
       ),
     );
