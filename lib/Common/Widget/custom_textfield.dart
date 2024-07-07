@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
-
   final String? labelText;
-
+  final Widget? prefix;
   const CustomTextField({
     super.key,
     required this.hintText,
     this.labelText,
+    this.prefix,
   });
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,6 +24,7 @@ class CustomTextField extends StatelessWidget {
             decoration: InputDecoration(
                 hintText: hintText,
                 labelText: labelText,
+                prefix: prefix,
                 border: InputBorder.none),
           ),
         ),

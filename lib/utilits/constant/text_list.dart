@@ -19,6 +19,15 @@ static const String address ="Address";
 static const String number ="Phone Number";
 static const String buttonName ="Sign-Up";
 static const String skip = "Skip";
-// /Welcome Page
+// Welcome Page
 static const String welcomeText ="Welcome to the ultimate \n   grocery experience";
+//Home Page
+static const String fleidText= "Search here";
+static const String categori= "Categories ";
+// Categoris Text
+static const String v ="Vegetables";
+static const String f ="Fruits";
+static const String m ="Meats";
+static const String c ="Chicken";
+static const String d ="Drinks";
 }
