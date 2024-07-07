@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salon/Screen/Home%20Page/home_screen.dart';
-import 'package:salon/Screen/Pages/next_page.dart';
+
 
 
 

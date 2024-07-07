@@ -8,4 +8,13 @@ static const String fruits ="assets/categorisimage/Fruits.png";
 static const String meats ="assets/categorisimage/Meats.png";
 static const String chicken ="assets/categorisimage/Chicken.png";
 static const String drinks ="assets/categorisimage/Drinks.png";
+static const String productPercent ="assets/images/percentProduct.png";
+static const String saveUp ="assets/images/saveUp.png";
+// Product Name Image List
+static const String tomato ="assets/ProductImage/Tomato.png";
+static const String garlic ="assets/ProductImage/Garlic.png";
+static const String carrot ="assets/ProductImage/Carrot.png";
+static const String cucumber ="assets/ProductImage/Cucumber.png";
+static const String meat ="assets/ProductImage/Meat.png";
+static const String chicken1 ="assets/ProductImage/Chicken.png";
 }

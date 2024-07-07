@@ -30,4 +30,13 @@ static const String f ="Fruits";
 static const String m ="Meats";
 static const String c ="Chicken";
 static const String d ="Drinks";
+static const String body ="Promo";
+static const String selling ="To Selling";
+// Product Name List
+static const String t= "Tomato";
+static const String g= "Garlic";
+static const String ca= "Carrot";
+static const String cu= "Cucumber";
+static const String meats= "Meat";
+static const String murgi= "Chicken";
 }

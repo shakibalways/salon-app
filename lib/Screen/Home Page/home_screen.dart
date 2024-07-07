@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:salon/Data/product_list.dart';
 import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
@@ -17,92 +20,186 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(int.parse(RColors.homeColor)),
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            children: [
-              RichText(
-                  text: TextSpan(
-                      style: const TextStyle(
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              children: [
+                RichText(
+                    text: TextSpan(
+                        style: const TextStyle(
+                            color: Colors.grey,
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold),
+                        children: <TextSpan>[
+                      const TextSpan(text: RTexts.titleText),
+                      TextSpan(
+                          text: RTexts.titleText1,
+                          style: TextStyle(
+                              color: Color(int.parse(RColors.colorCode)))),
+                    ])),
+                Image.asset(
+                  RImages.notification,
+                  height: 30,
+                )
+              ],
+            ),
+            SizedBox(
+              width: 420,
+              height: 50,
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Color(int.parse(RColors.textfleidColor))),
+                child: TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                        borderSide: const BorderSide(
                           color: Colors.grey,
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold),
-                      children: <TextSpan>[
-                    const TextSpan(text: RTexts.titleText),
-                    TextSpan(
-                        text: RTexts.titleText1,
-                        style: TextStyle(
-                            color: Color(int.parse(RColors.colorCode)))),
-                  ])),
-              Image.asset(
-                RImages.notification,
-                height: 30,
-              )
-            ],
-          ),
-          SizedBox(
-            width: 420,
-            height: 50,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Color(int.parse(RColors.textfleidColor))),
-              child: TextField(
-                decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                      borderSide: const BorderSide(
-                        color: Colors.grey,
+                        ),
                       ),
-                    ),
-                    prefix: const Padding(
-                      padding: EdgeInsets.only(left: 20),
-                      child: Icon(Icons.search),
-                    ),
-                    hintText: RTexts.fleidText,
-                    border: OutlineInputBorder(
-                        borderSide: const BorderSide(),
-                        borderRadius: BorderRadius.circular(25))),
+                      prefix: const Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: Icon(Icons.search),
+                      ),
+                      hintText: RTexts.fleidText,
+                      border: OutlineInputBorder(
+                          borderSide: const BorderSide(),
+                          borderRadius: BorderRadius.circular(25))),
+                ),
               ),
             ),
-          ),
-          Text(
-            RTexts.categori,
-            style: TextStyle(
-                color: Color(
-                  int.parse(RColors.colorCode),
-                ),
-                fontSize: 30,
-                fontWeight: FontWeight.bold),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: SizedBox(
-              height: 50,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: categorisList.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: ElevatedButton(
-                          style: const ButtonStyle(
-                              backgroundColor:
-                                  MaterialStatePropertyAll(Colors.cyan)),
-                          onPressed: () {},
-                          child: Row(
-                            children: [
-                              Image.asset(categorisList[index].imagePath),
-                              Text(categorisList[index].categoriName)
-                            ],
-                          )),
-                    );
-                  }),
+            Text(
+              RTexts.categori,
+              style: TextStyle(
+                  color: Color(
+                    int.parse(RColors.colorCode),
+                  ),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: SizedBox(
+                height: 50,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemCount: categorisList.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: ElevatedButton(
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.cyan)),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Image.asset(categorisList[index].imagePath),
+                                Text(categorisList[index].categoriName)
+                              ],
+                            )),
+                      );
+                    }),
+              ),
+            ),
+            Text(
+              RTexts.body,
+              style: TextStyle(
+                  color: Color(int.parse(RColors.colorCode)),
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Image.asset(RImages.productPercent),
+                    Image.asset(RImages.saveUp),
+                  ],
+                ),
+              ),
+            ),
+            const Text(
+              RTexts.selling,
+              style: TextStyle(
+                  color: Color(0xFF370C92),
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
+            GridView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, mainAxisSpacing: 8),
+                itemCount: productSerial.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Container(
+                      decoration:
+                          BoxDecoration(color: Colors.white, boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: const Offset(0, 3),
+                        )
+                      ]),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          Positioned(
+                            bottom: 60,
+                            left: 35,
+                            child: Column(
+
+                              children: [
+                                Image.asset(productSerial[index].imagePath),
+                                Text(
+                                  productSerial[index].productName,
+                                  style: const TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                const Row(
+
+                                  children: [
+                                    Text("22 min"),
+                                    CircleAvatar(
+                                      radius: 5,
+                                      backgroundColor: Colors.grey,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.yellow,
+                                        ),
+                                        Text("4.7"),
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                })
+          ],
+        ),
       ),
     );
   }
