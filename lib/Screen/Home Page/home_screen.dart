@@ -16,15 +16,14 @@ class HomeScreenPage extends StatefulWidget {
 }
 
 class _HomeScreenPageState extends State<HomeScreenPage> {
+  int changeColor = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(int.parse(RColors.homeColor)),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: 15,right: 25,top: 50
-          ),
+          padding: const EdgeInsets.only(left: 15, right: 25, top: 50),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -104,10 +103,16 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 10),
                         child: ElevatedButton(
-                            style: const ButtonStyle(
-                                backgroundColor:
-                                    MaterialStatePropertyAll(Colors.cyan)),
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                changeColor = index;
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: changeColor == index
+                                  ? Colors.grey
+                                  : Colors.red,
+                            ),
                             child: Row(
                               children: [
                                 Image.asset(categorisList[index].imagePath),
@@ -216,7 +221,6 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
           ),
         ),
       ),
-
     );
   }
 }

@@ -17,4 +17,6 @@ static const String carrot ="assets/ProductImage/Carrot.png";
 static const String cucumber ="assets/ProductImage/Cucumber.png";
 static const String meat ="assets/ProductImage/Meat.png";
 static const String chicken1 ="assets/ProductImage/Chicken.png";
+// Back
+static const String back = "assets/ProductImage/Back.png";
 }
