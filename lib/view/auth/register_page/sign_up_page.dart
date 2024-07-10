@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:salon/Common/Widget/custom_textfield.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
-import '../../utilits/constant/color_code_list.dart';
-import '../../utilits/constant/text_list.dart';
+import '../../../utilits/constant/color_code_list.dart';
+import '../../../utilits/constant/text_list.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});

@@ -3,7 +3,7 @@ import 'package:salon/Common/Widget/custom_textfield.dart';
 import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
-import '../../utilits/constant/text_list.dart';
+import '../../../utilits/constant/text_list.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
