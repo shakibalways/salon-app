@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:salon/Screen/Home%20Page/home_screen.dart';
-import 'package:salon/view/auth/item_selection_page.dart';
+
 
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return   MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ItemSelectionPage(),
+      home: HomeScreenPage(),
     );
   }
 }
