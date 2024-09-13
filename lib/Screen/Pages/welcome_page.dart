@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 import 'package:salon/utilits/constant/text_list.dart';
 
-import '../../utilits/constant/color_code_list.dart';
+
 
 
 
