@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:salon/Common/Widget/container_custom.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
-
-
-
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
 
