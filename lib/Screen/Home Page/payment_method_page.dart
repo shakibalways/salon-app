@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 
-
-
 class PaymentMethodPage extends StatefulWidget {
   const PaymentMethodPage({super.key});
 
