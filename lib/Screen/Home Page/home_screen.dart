@@ -4,9 +4,9 @@ import 'package:salon/data%20model/product_list.dart';
 
 import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
+import 'package:salon/utilits/constant/text_list.dart';
 
 
-import '../../utilits/constant/text_list.dart';
 
 class HomeScreenPage extends StatefulWidget {
   const HomeScreenPage({super.key});
