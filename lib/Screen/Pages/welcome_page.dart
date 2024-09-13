@@ -3,10 +3,6 @@ import 'package:salon/utilits/constant/color_code_list.dart';
 import 'package:salon/utilits/constant/image_list.dart';
 import 'package:salon/utilits/constant/text_list.dart';
 
-
-
-
-
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
@@ -36,9 +32,13 @@ class WelcomePage extends StatelessWidget {
                         children: <TextSpan>[
                       const TextSpan(text: RTexts.titleText),
                       TextSpan(
-                          text: RTexts.titleText1,
-                          style: TextStyle(
-                              color: Color(int.parse(RColors.colorCode)))),
+                        text: RTexts.titleText1,
+                        style: TextStyle(
+                          color: Color(
+                            int.parse(RColors.colorCode),
+                          ),
+                        ),
+                      ),
                     ])),
                 const Text(
                   RTexts.welcomeText,
@@ -47,7 +47,9 @@ class WelcomePage extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 SizedBox(
                   height: 30,
                   child: ListView.builder(
@@ -59,8 +61,8 @@ class WelcomePage extends StatelessWidget {
                           padding: const EdgeInsets.only(right: 1),
                           child: CircleAvatar(
                             radius: 20,
-                            backgroundColor: Color(int.parse(RColors.colorCode)),
-
+                            backgroundColor:
+                                Color(int.parse(RColors.colorCode)),
                           ),
                         );
                       }),
